@@ -1,0 +1,85 @@
+<view class="section">
+  <view class="up_box">
+    <view class="top_box">
+      <view class="address">
+        <image src="./img/定位@2x.png"></image>
+        鹤壁市
+      </view>
+      <swiper class="swiper" :indicator-dots="indicatorDots" :autoplay="autoplay" :interval="interval"
+        :duration="duration">
+        <block wx:for="{{imgUrls}}" wx:key="index">
+          <swiper-item class="item_sw">
+            <image src="{{item}}" class="slide-image" />
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view class="sb"></view>
+    <view class="concle_box">
+      <text style="font-size:17px">平台介绍</text>
+      <view style="height:10px;width:80px;background:#ACDEE2;margin:-4px auto;"></view>
+      <view class="introduce_box">
+        <view class="introduce_text">好网云祭是为了方便大家网上祭扫、随时悼念已故亲友的平台，缅怀逝者，祭奠亲人、忙了、累了？心烦了？ 来这里静静心、网上祭扫传承生命文化，永久保存珍藏生命故事。
+        </view>
+      </view>
+    </view>
+    <view class="notice">
+      <image src="./img/喇叭@2x.png"></image>
+      <text> 为逝去的亲人故友建立网上纪念馆...</text>
+    </view>
+
+    <view class="title_box">
+      <text style="font-size:17px">本地服务推荐</text>
+      <view style="height:10px;width:120px;background:#ACDEE2;margin:-4px auto;"></view>
+    </view>
+    <view class="more_list">
+      <view>全部</view>
+      <view>墓园</view>
+      <view>殡葬服务</view>
+      <view>风水阴阳</view>
+      <view>更多</view>
+    </view>
+    <view class="list_box">
+      <view>
+        <view wx:for="{{array}}">
+          <image class="list_img" src="{{item.imgUrl}}"></image>
+          <view>{{item.title_name}}</view>
+          <view class="wei_font">{{item.position}}</view>
+        </view>
+      </view>
+    </view>
+
+
+  </view>
+  <view class="down_box">
+    <view class="title_box">
+      <text style="font-size:17px;">缅文推荐</text>
+      <view style="height:10px;width:80px;background:#ACDEE2;margin:-4px auto;"></view>
+    </view>
+    <view class="recommend_box">
+      <view class="recommend_list" wx:for="{{recommend}}">
+        <image class="list_img" src="{{item.imgUrl}}"></image>
+        <view class="text_rec_box">
+          <text class="text_rec">{{item.title_name}}</text>
+          <view>{{item.position}}</view>
+          <view class="rec_time">{{item.time}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='bottom'>
+    <view>
+      <image src='./img/编组 15@2x.png'></image>
+      <image src='./img/编组 16@2x.png' bindtap='gotoindex'></image>
+      <image src='./img/编组 17@2x.png' bindtap='gwc'></image>
+      <image src='./img/编组 27@2x.png' bindtap='me'></image>
+    </view>
+    <view>
+      <text style='color:#6FB0D8'>首 页</text>
+      <text bindtap='gotoindex'>分 类</text>
+      <text style='width:45px' bindtap='gwc'>购物车</text>
+      <text bindtap='me'>我 的</text>
+    </view>
+  </view>
+  <view style="height:60px"></view>
+</view>
